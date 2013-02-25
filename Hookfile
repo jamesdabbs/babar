@@ -1,0 +1,3 @@
+action 'Gemfile'      => 'bundle'
+action 'Hookfile'     => 'babar install', :auto => true
+action 'db/schema.rb' => 'rake db:migrate'

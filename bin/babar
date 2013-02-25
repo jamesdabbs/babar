@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require 'babar'
+
+case ARGV.first
+when 'install'
+  raise 'Could not find .git/hooks directory' unless Dir.exists? '.git/hooks'
+  `touch .git/hooks/post-merge`
+  `sed -i '.tmp' '/babar/d' '.git/hooks/post-merge'` # Keep it idempotent
+  `echo babar >> .git/hooks/post-merge`
+  `chmod +x .git/hooks/post-merge`
+  puts 'Installed .git/hooks/post-merge'
+
+when 'uninstall'
+  `sed -i '.tmp' '/babar/d' '.git/hooks/post-merge'`
+
+when nil
+  Babar.run
+
+else
+  puts "Unexpected option: #{ARGV.first}"
+  puts 'Usage: babar [un[install]]'
+end
