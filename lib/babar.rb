@@ -1,5 +1,3 @@
-load 'tasks/babar.rake' if defined? Rake
-
 require 'babar/action'
 require 'babar/manifest'
 
