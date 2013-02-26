@@ -12,7 +12,5 @@ Gem::Specification.new do |spec|
   spec.executables   = 'babar'
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rake'
-
   spec.post_install_message = "\e[33mPlease run `babar install` to set up git hooks\e[0m"
 end
