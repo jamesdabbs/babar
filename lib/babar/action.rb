@@ -1,7 +1,7 @@
 module Babar
   class Action
     def initialize target, action, opts={}
-      @target = Regexp.new target
+      @target = /#{target}/
       @action = action
       @auto   = opts[:auto]
     end
