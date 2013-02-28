@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    babar (0.0.1)
-      rake
+    babar (0.0.2)
 
 GEM
   remote: http://rubygems.org/

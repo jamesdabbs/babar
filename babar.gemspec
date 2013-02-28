@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'babar'
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.date          = '2013-02-25'
   spec.description   = 'Project-oriented management of git merge hooks'
   spec.summary       = spec.description
